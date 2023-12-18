@@ -20,7 +20,7 @@ function reducer(state, { type, payload } /*action*/) {
           overwrite: false,
           currentOperand: payload.digit,
           // Preserve in case of accidental input.
-          previousOperand: state.currentOperand
+          previousOperand: state.previousOperand + state.currentOperand
         }
       }
       return {
